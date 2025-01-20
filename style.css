@@ -13,7 +13,9 @@ label {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
 /* Убираем галочку в IE */
