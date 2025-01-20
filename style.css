@@ -9,17 +9,52 @@ label {
 /* Select */
 
 .select {
+  width: 100%;
   /* Убираем браузерную стрелку */
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  border: none;
-  background-color: transparent;
+  border: 1px solid #7E9BBD;
+  border-radius: 6px;
+  background-color: #fff;
+  /* Отступы */
+  padding: 10px 35px 10px 15px;
+  /* Обводка в браузере */
   outline: none;
+  cursor: pointer;
 }
 
 /* Убираем галочку в IE */
 
 .select::-ms-expand {
   display: none;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+/* Стрелка */
+
+.select-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: block;
+  width: 10px;
+  height: 10px;
+  /* Снимаем клик с треугольника */
+  pointer-events: none;
+
+  /* Рисуем треугольник */
+
+
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10.4px 6px 0px 6px;
+  border-color: #7e9bbd transparent transparent transparent;
 }
