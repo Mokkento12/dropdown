@@ -88,7 +88,8 @@ label {
   cursor: pointer;
 }
 
-.dropdown__button:focus {
+.dropdown__button:focus,
+.dropdown__button--active {
   outline: none;
   box-shadow: 0px 4px rgba(176, 198, 255, 0.6);
 }
@@ -121,6 +122,7 @@ label {
 }
 
 .dropdown__list {
+  display: none;
   position: absolute;
   left: 0;
   top: 52px;
@@ -136,6 +138,10 @@ label {
   width: 100%;
 
   z-index: 1;
+}
+
+.dropdown__list--visible {
+  display: block;
 }
 
 .dropdown__list-item {
@@ -158,4 +164,10 @@ label {
 
 .dropdown__list-item:hover {
   background: rgba(176, 198, 255, 0.26)
+}
+
+.dropdown__input-hidden {
+  /* display: none; */
+
+
 }
